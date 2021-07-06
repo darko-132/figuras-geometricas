@@ -15,19 +15,37 @@
     <main class="contenedor">
         <section class="cuadrado" id="cuadrado">
             <h2>Cuadrado</h2>
-            <div class="figureSquare">
-
+            <div class="figureSquare"></div>
+            <div class="inputFigures">
+                <label for="mcu">Medida del cuadrado</label><br>
+                <input type="text" class="medidaCuadrado" id="mcu" placeholder="Inserte uno de los lados" onblur="cuadrado()"> <br>
+                <input type="text"class="areaCuadrado" id="acu" placeholder="Area" disabled> 
+                <input type="text" class="perimetroCuadrado" id="pcu" placeholder="Perimetro" disabled>
             </div>
         </section>
             
-        <section class="triangulo" id="triangulo">
+        <section class="triangulo" id="triangulo" class="inputFigures">
             <h2>Triangulo</h2>
             <div class="figureTriangle"></div>
+            <div class="inputFigures">
+                <label for="mt">Medida del triangulo</label><br>
+                <input type="text" class="medidaTriangulo" id="mt" placeholder="Inserte uno de los lados" onblur="triangulo()"><br>
+                <input type="text" class="alturaTriangulo" id="at" placeholder="Altura" disabled>
+                <input type="text" class="areaTriangulo" id="atr" placeholder="Area" disabled><br>
+                <input type="text" class="perimetroTriangulo" id="pt" placeholder="Perimetro" disabled>
+            </div>
         </section>
 
-        <section class="circulo" id=" circulo">
+        <section class="circulo" id=" circulo" >
             <h2>Circulo</h2>
             <div class="figureCircle"></div>
+            <div class="inputFigures">
+                <label for="mc">Medida del Circulo</label><br>
+                <input type="text" class="medidaCiculo" id="mc" placeholder="Inserte diametro" onblur="circulo()"><br>
+                <input type="text" class="radioCirculo" id="rc" placeholder="Radio" disabled>
+                <input type="text" class="areaCiculo" id="ac" placeholder="Area" disabled><br>
+                <input type="text" class="perimetroCirculo" id="pt" placeholder="Perimetro" disabled>
+            </div>
         </section>
     </main>
 

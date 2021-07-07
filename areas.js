@@ -5,7 +5,7 @@ function cuadrado(){
     let p= m*4
 
     if(m>0){
-        document.getElementById("acu").value=a.toFixed(2)+"Cm"
+        document.getElementById("acu").value=a.toFixed(2)+"Cm^2"
         document.getElementById("pcu").value=p.toFixed(2)+"Cm"
     }else{
         alert("inserte un numero valido")
@@ -23,7 +23,7 @@ function triangulo(){
 
     if(m>0){
         document.getElementById("at").value=h.toFixed(2)+"Cm"
-        document.getElementById("atr").value=a.toFixed(2)+"Cm"
+        document.getElementById("atr").value=a.toFixed(2)+"Cm^2"
         document.getElementById("pt").value=p.toFixed(2)+"Cm"
     }else{
         alert("inserte un numero valido")
@@ -42,7 +42,7 @@ function circulo(){
 
     if(d>0){
         document.getElementById("rc").value=r.toFixed(2)+"Cm"
-        document.getElementById("ac").value=a.toFixed(2)+"Cm"
+        document.getElementById("ac").value=a.toFixed(2)+"Cm^2"
         document.getElementById("pc").value=p.toFixed(2)+"Cm"
     }else{
         alert("inserte un numero valido")

@@ -30,15 +30,22 @@
             <h2>Triangulo</h2>
             <div class="figureTriangle"></div>
             <div class="inputFigures">
-                <label for="mt">Medida del triangulo en Cm</label><br>
-                <input type="text" class="medidaTriangulo" id="mt" placeholder="Inserte uno de los lados" onblur="triangulo()"><br>
-                <label for="at">Altura</label>
-                <input type="text" class="alturaTriangulo" id="at" placeholder="Altura" disabled>
-                <label for="atr">Area</label>
-                <input type="text" class="areaTriangulo" id="atr" placeholder="Area" disabled><br>
-                <label for="pt">Perimetro</label>
-                <input type="text" class="perimetroTriangulo" id="pt" placeholder="Perimetro" disabled>
+                <label for="">Medida del triangulo en Cm</label> <br>
+                <label for="">Lado a</label>
+                <input type="number"id="a" class="a" placeholder="medida a" onblur="triangulo()">
+                <label for="">Lado b</label>
+                <input type="number"id="b" class="b" placeholder="medida b" onblur="triangulo()">
+                <label for="">Lado c</label>
+                <input type="number"id="c" class="c" placeholder="medida c" onblur="triangulo()"><br>
+                <label for="">area</label>
+                <input type="text"id="atr" placeholder="area" disabled>
+                <label for="">altura</label>
+                <input type="text"id="at" placeholder="altura" disabled>
+                <label for="">perimetro</label>
+                <input type="text"id="pt" placeholder="perimetro" disabled>
             </div>
+            <span>c= base</span>
+            <h2 id="tTriangulo"></h2>
         </section>
 
         <section class="circulo" id=" circulo" >

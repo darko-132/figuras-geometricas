@@ -14,7 +14,58 @@ function cuadrado(){
 }
 // calculo de medidas del triangulo
 function triangulo(){
-    let m= document.getElementById("mt").value;
+    const a =parseInt(document.getElementById("a").value);
+    const b =parseInt(document.getElementById("b").value);
+    const c =parseInt(document.getElementById("c").value);
+    var tT =document.getElementById("tTriangulo").innerHTML;
+     if(a===b && b===c && c===a){
+         let raiz= Math.sqrt(3)
+         let h= (a*raiz)/4
+         let ar= (h*a)/2
+         let p= a*3
+         document.getElementById("atr").value=ar.toFixed(2)+"Cm^2";
+         document.getElementById("at").value=h.toFixed(2)+"Cm";
+         document.getElementById("pt").value=p.toFixed(2)+"Cm";
+         console.log(h)
+        
+        document.getElementById("tTriangulo").innerHTML="Es un triangulo equilatero"  
+     }
+     else if(a===b && a!==c || b===c && b!==a || c===a && c!==b){
+        let p=a+b+c;
+             
+        if(a===b && a!==c){
+            let ar=(c/4)*Math.sqrt(4*(a*a)-(c*c))
+            let h= 2*(ar/c)
+            document.getElementById("at").value=h.toFixed(2)+"Cm";
+            document.getElementById("atr").value=ar.toFixed(2)+"Cm^2";
+        }
+        else if(b===c && b!==a){
+            let ar=(a/4)*Math.sqrt(4*(b*b)-(a*a))
+            let h= 2*(ar/a)
+            document.getElementById("at").value=h.toFixed(2)+"Cm";
+            document.getElementById("atr").value=ar.toFixed(2)+"Cm^2";   
+        }
+        else if(c===a && c!==b){
+            let ar=(b/4)*Math.sqrt(4*(a*a)-(b*b))
+            let h=2*(ar/b)
+            document.getElementById("at").value=h.toFixed(2)+"Cm";
+            document.getElementById("atr").value=ar.toFixed(2)+"Cm^2";   
+        }
+        document.getElementById("pt").value=p.toFixed(2)+"Cm";
+        document.getElementById("tTriangulo").innerHTML="Es un triangulo isoceles"
+     }
+     else if(a!==b!==c){
+         let p=a+b+c;
+         let s= p/2
+         let ar= Math.sqrt(s*(s-a)*(s-b)*(s-c))
+         let h= (2/c)*ar
+         document.getElementById("at").value=h.toFixed(2)+"Cm";
+         document.getElementById("atr").value=ar.toFixed(2)+"Cm^2";   
+         document.getElementById("pt").value=p.toFixed(2)+"Cm";
+         document.getElementById("tTriangulo").innerHTML="Es un triangulo escaleno"
+     }
+
+    /* let m= document.getElementById("mt").value;
     let raiz= Math.sqrt(3)
     let exp= Math.pow(m,2)
     let h= (m*raiz)/2
@@ -27,7 +78,7 @@ function triangulo(){
         document.getElementById("pt").value=p.toFixed(2)+"Cm"
     }else{
         alert("inserte un numero valido")
-    }
+    } */
     
 }
 // calculo de medidas del circulo
